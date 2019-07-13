@@ -24,6 +24,8 @@ var (
 	undoOut bytes.Buffer
 )
 
+const version  = "v1.0.0"
+
 func init(){
 	addCmd.PersistentFlags().StringVarP(&files,"files","f","", "Single File or Multiple Files With Spaces Within Quotes")
 	addCmd.PersistentFlags().StringVarP(&comment,"comment", "c", "", "Comment")
@@ -54,12 +56,12 @@ func main(){
 		fmt.Println("GOGIT is command line tool to use git command in simple way.")
 		fmt.Printf("\nUsage: gogit [COMMAND]\n")
 		fmt.Printf("\nCommands:\n")
-		fmt.Println("add,        Add Files To The Repository")
-		fmt.Println("get,        Get a Repository or Branch Updated Files")
-		fmt.Println("ls,         List All The Change Files")
-		fmt.Println("newbranch,  Creates A New Branch")
-		fmt.Println("undo,       Reset your commit to particular commit or Reset last commit")
-
+		fmt.Println("ls          List All The Change Files")
+		fmt.Println("add         Add Files To The Repository")
+		fmt.Println("get         Get a Repository or Branch Updated Files")
+		fmt.Println("undo        Reset your commit to particular commit or Reset last commit")
+		fmt.Println("newbranch   Creates A New Branch")
+		fmt.Println("version     Display GOGIT Version")
 		os.Exit(0)
 	}
 	inputCMD(os.Args[1])
@@ -67,6 +69,8 @@ func main(){
 
 func inputCMD(cmd string){
 	switch cmd {
+	case "version":
+		versionFunc()
 	case "get":
 		getFunc()
 	case "newbranch":
@@ -88,6 +92,10 @@ func cmdFunc(getRepocmd *exec.Cmd){
 		getRepocmd.Stdout = os.Stdout
 		getRepocmd.Stderr = os.Stderr
 		getRepocmd.Run()
+}
+
+func versionFunc(){
+		fmt.Println("GOGIT",version)
 }
 
 func getFunc(){
