@@ -1,9 +1,5 @@
 # GOGIT
 
-[![Build Status](http://192.168.0.3/job/build-go-git/badge/icon)](http://192.168.0.3/job/build-go-git/)
-
-[![Quality Gate Status](http://192.168.0.3:9000/api/project_badges/measure?project=gogit-simple-run&metric=alert_status)](http://192.168.0.3:9000/dashboard?id=gogit-simple-run)
-
 ## Overview
 
 GoGit is a highly efficient binary with fully compatible with GIT written in GO language. It's written to do day to day GIT command in more simple way and easy to remember commands.
