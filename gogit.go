@@ -34,7 +34,7 @@ func init(){
 
 var addCmd = &cobra.Command{
 	Use:   "gogit",
-	Short: "gogit is simple commandline tool for git commands",
+	Short: "GOGIT is command line tool to use git commands in simple way.",
 	Long: `This tool do all git commands in simple way
 	Usage: gogit add -f "[Filenames]" -c "[Comment]" -b "[Branch Name]"`,
 
@@ -53,7 +53,7 @@ var addCmd = &cobra.Command{
 
 func main(){
 	if len(os.Args) < 2 || os.Args[1] == "help" || os.Args[1] == "--help" || os.Args[1] == "-h" {
-		fmt.Println("GOGIT is command line tool to use git command in simple way.")
+		fmt.Println("GOGIT is command line tool to use git commands in simple way.")
 		fmt.Printf("\nUsage: gogit [COMMAND]\n")
 		fmt.Printf("\nCommands:\n")
 		fmt.Println("ls          List All The Change Files")
@@ -100,7 +100,7 @@ func versionFunc(){
 
 func getFunc(){
 	if len(os.Args) != 3 || os.Args[2] == "help" || os.Args[2] == "--help" || os.Args[2] == "-h"{
-		fmt.Println("GOGIT is command line tool to use git command in simple way.")
+		fmt.Println("GOGIT is command line tool to use git commands in simple way.")
 		fmt.Printf("\nUSAGE: gogit get [URL] or [BranchName]\n\n")
 		os.Exit(0)
 	}
@@ -117,7 +117,7 @@ func getFunc(){
 
 func newbranchFunc(){
 	if len(os.Args) != 3 || os.Args[2] == "help" || os.Args[2] == "--help" || os.Args[2] == "-h" {
-		fmt.Println("GOGIT is command line tool to use git command in simple way.")
+		fmt.Println("GOGIT is command line tool to use git commands in simple way.")
 		fmt.Printf("\nUSAGE: gogit newbranch [Branch Name]\n\n")
 		os.Exit(0)
 	}
@@ -204,7 +204,7 @@ func addFunc(){
 
 func undoFunc(){
 	if len(os.Args) == 3 && ( os.Args[2] == "help" || os.Args[2] == "--help" || os.Args[2] == "-h") {
-		fmt.Println("GOGIT is command line tool to use git command in simple way.")
+		fmt.Println("GOGIT is command line tool to use git commands in simple way.")
 		fmt.Printf("\nUSAGE: gogit [COMMAND] \n")
 		fmt.Printf("\nCommands:\n")
 		fmt.Println("undo,        			  Reset Commit To Last Commit")
