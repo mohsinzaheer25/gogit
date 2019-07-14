@@ -1,6 +1,8 @@
 # GOGIT
 
-[![Build Status](http://localhost/job/build-go-git/badge/icon)](http://localhost/job/build-go-git/) [![Quality Gate Status](http://localhost:9000/api/project_badges/measure?project=gogit-simple-run&metric=alert_status)](http://localhost:9000/dashboard?id=gogit-simple-run)
+[![Build Status](http://192.168.0.3/job/build-go-git/badge/icon)](http://192.168.0.3/job/build-go-git/)
+
+[![Quality Gate Status](http://192.168.0.3:9000/api/project_badges/measure?project=gogit-simple-run&metric=alert_status)](http://192.168.0.3:9000/dashboard?id=gogit-simple-run)
 
 ## Overview
 
