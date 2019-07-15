@@ -11,17 +11,9 @@ import (
 	"strings"
 )
 var (
-	files string
-	comment string
-	branch  string
-	gitInput string
-	branchName string
-	uniqueCommit string
-	branchout bytes.Buffer
-	modout bytes.Buffer
-	uncommitout bytes.Buffer
-	untrackout bytes.Buffer
-	undoOut bytes.Buffer
+	files, comment, branch, gitInput, branchName, uniqueCommit string
+
+	branchout, modout, uncommitout, untrackout, undoOut bytes.Buffer
 )
 
 const version  = "v1.0.0"
@@ -169,7 +161,7 @@ func listFunc(){
 	}
 
 
-	untrackCMD := exec.Command("git","ls-files", "-o")
+	untrackCMD := exec.Command("git","ls-files", "-o", "--exclude-standard")
 	untrackCMD.Stdout = &untrackout
 	untrackCMD.Run()
 	if untrackout.String() != ""{
